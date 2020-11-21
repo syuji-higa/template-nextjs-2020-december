@@ -29,6 +29,7 @@ class MyDocument extends Document implements MyDocumentInterface {
           <meta name="twitter:title" content={this.title} />
           <meta name="twitter:description" content={this.description} />
           <meta name="twitter:image" content={`${this.url}/ogp.png`} />
+          <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         </Head>
         <body>
