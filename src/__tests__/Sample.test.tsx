@@ -1,3 +1,5 @@
+/// <reference types="jest" />
+
 import React from 'react'
 import { cleanup, render, screen } from '@testing-library/react'
 import Home from 'pages/index'
