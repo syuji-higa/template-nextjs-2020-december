@@ -1,3 +1,4 @@
+import React from 'react'
 import { AppProps } from 'next/app'
 import 'sanitize.css'
 import 'styles/globals.scss'
