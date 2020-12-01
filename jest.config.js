@@ -3,7 +3,7 @@ module.exports = {
   roots: ['<rootDir>/src'],
   moduleNameMapper: {
     '\\.(css|scss)$': 'identity-obj-proxy',
-    '^(pages)/(.+)': '<rootDir>/src/$1/$2',
+    '^(pages|components)/(.+)': '<rootDir>/src/$1/$2',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   globals: {
