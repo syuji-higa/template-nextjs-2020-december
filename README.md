@@ -1,30 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Use
 
-## Getting Started
+- Framework: [Next.js](https://nextjs.org/) ([React](https://ja.reactjs.org/))
+- Static typing: [TypeScript](https://www.typescriptlang.org/)
+- PWA: [next-pwa](https://github.com/shadowwalker/next-pwa)
+- Styling: [CSS Modules](https://github.com/css-modules/css-modules) + [SASS](https://sass-lang.com/)
+- State management: [Recoil](https://recoiljs.org/)
+- Lint & Formatter: [EditorConfig](https://editorconfig.org/) + [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
+- Test: [Jest](https://jestjs.io/ja/) + [React Testing Library](https://testing-library.com/) + [Cypress](https://www.cypress.io/)
+- Component catalog: [Stroybook](https://storybook.js.org/) ([StoryShots](https://github.com/storybookjs/storybook/tree/master/addons/storyshots) を含む)
+- Hook script: [lint-staged](https://github.com/okonet/lint-staged) + [husky](https://typicode.github.io/husky/#/)
 
-First, run the development server:
+# Command
 
-```bash
-npm run dev
-# or
+```sh
+# dev
 yarn dev
+
+# build
+yarn build
+
+# start
+yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Storybook
+```sh
+yarn storybook
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# build
+yarn build-storybook
+```
 
-## Learn More
+## Lint
+```sh
+yarn lint
 
-To learn more about Next.js, take a look at the following resources:
+# auto fix
+yarn lint --fix
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# lint for git stage
+yarn lint-staged
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Test
+```sh
+yarn test
 
-## Deploy on Vercel
+# watch
+yarn test --watch
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# update snapshot
+yarn test -u -t="{TargetName}"
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# update snapshot all
+yarn test -u
+
+# coverage
+yarn test --coverage
+```
+
+## Story Snapshot
+```sh
+yarn storyshots
+
+# image snapshot (run while storybook running)
+yarn puppeteer-storyshots
+
+# update image snapshot (run while storybook running)
+yarn puppeteer-storyshots -u -t="{TargetName}"
+
+# update image snapshot all (run while storybook running)
+yarn puppeteer-storyshots -u
+```
