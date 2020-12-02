@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
+    "lint-staged": "lint-staged",
     "test": "jest src/__tests__/.*/*.test.tsx?$",
     "storyshots": "jest src/storyshots/storybook.test.ts",
     "puppeteer-storyshots": "jest src/storyshots/puppeteer-storyshots*.test.ts",
@@ -15,11 +16,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint",
-      "pre-push": "yarn test && yarn storyshots && yarn puppeteer-storyshots"
-    }
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix"
   },
   "dependencies": {
     "next": "10.0.2",
@@ -50,6 +48,7 @@
     "husky": "^4.3.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
+    "lint-staged": ">=10",
     "prettier": "^2.2.0",
     "puppeteer": "^5.5.0",
     "sanitize.css": "^12.0.1",
