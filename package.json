@@ -23,7 +23,8 @@
     "next": "10.0.2",
     "next-pwa": "^3.1.5",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "recoil": "^0.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
