@@ -49,3 +49,6 @@ cypress/screenshots
 
 # storybook
 storybook-static
+
+# storyshots
+src/storyshots/__snapshots__/__diff_output__
