@@ -51,4 +51,4 @@ cypress/screenshots
 storybook-static
 
 # storyshots
-src/storyshots/__snapshots__/__diff_output__
+src/storyshots/__image_snapshots__/__diff_output__
